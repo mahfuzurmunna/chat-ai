@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat AI</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <!-- styles CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- AOS CDN CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- DAY NIGHT TOGGLE CSS -->
+    <link href="./css/day-night.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation content goes here -->
+      <nav>
+        <div class="navbar">
+          <div class="logo">
+            <a href="/" id="logoLink">
+              <img
+                class="logo-image"
+                data-theme="dark"
+                src="./img/logo-dark.svg"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <div id="navIcon" class="navbar__menu-icon">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+          </div>
+          <ul id="navmenu" class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link navmenu__active" data-name="home" href="/"
+                >home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-name="feature" href="#feature"
+                >features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-name="pricing" href="#pricing"
+                >pricing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-name="how-to-use" href="#how-to-use"
+                >how to use</a
+              >
+            </li>
+            <li class="nav-item">
+              <div class="container">
+                <div class="switch">
+                  <label for="toggle">
+                    <input id="toggle" class="toggle-switch" type="checkbox" />
+                    <div class="sun-moon">
+                      <!-- SVG for the moon -->
+                      <svg
+                        class="moon"
+                        width="41"
+                        height="39"
+                        viewBox="0 0 41 39"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.3123 8.44876L26.3997 7.42236C26.4491 7.41108 26.5007 7.41253 26.5494 7.42658C26.5981 7.44063 26.6423 7.4668 26.6776 7.50255L29.6695 10.3893C29.7152 10.4322 29.7738 10.4596 29.8366 10.4673C29.8994 10.475 29.9631 10.4626 30.0182 10.432C30.0732 10.4014 30.1168 10.3542 30.1423 10.2974C30.1679 10.2406 30.1741 10.1772 30.16 10.1167L29.1137 6.10729C29.1021 6.05879 29.1036 6.00819 29.118 5.96042C29.1323 5.91265 29.159 5.86932 29.1954 5.83465L32.1383 2.88376C32.1853 2.83832 32.2153 2.7787 32.2236 2.71448C32.2319 2.65027 32.218 2.58519 32.184 2.52968C32.1501 2.47418 32.0981 2.43148 32.0364 2.40844C31.9748 2.3854 31.907 2.38335 31.844 2.40264L27.773 3.44507C27.7236 3.45636 27.672 3.4549 27.6233 3.44085C27.5746 3.4268 27.5304 3.40063 27.4951 3.36489L24.4868 0.47814C24.4411 0.435199 24.3825 0.407857 24.3197 0.400171C24.2569 0.392484 24.1932 0.404863 24.1381 0.43547C24.0831 0.466078 24.0395 0.513283 24.014 0.570082C23.9884 0.626881 23.9822 0.690247 23.9963 0.750777L25.059 4.76014C25.0705 4.80865 25.069 4.85924 25.0547 4.90701C25.0404 4.95479 25.0137 4.99811 24.9773 5.03278L22.0344 7.96764C21.9906 8.01248 21.9627 8.06996 21.9549 8.13157C21.9471 8.19317 21.9597 8.25561 21.9909 8.30963C22.0221 8.36364 22.0702 8.40635 22.1281 8.43141C22.186 8.45647 22.2506 8.46256 22.3123 8.44876Z"
+                          fill="#FFC300"
+                        />
+                        <path
+                          d="M23.02 12.7209L24.4917 14.1987C24.5085 14.216 24.5207 14.2371 24.5271 14.2602C24.5336 14.2833 24.534 14.3076 24.5285 14.3308L24.0011 16.3252C23.9913 16.3561 23.9923 16.3893 24.0041 16.4195C24.0158 16.4497 24.0376 16.4752 24.0659 16.4918C24.0942 16.5084 24.1274 16.5153 24.1601 16.5112C24.1929 16.5071 24.2232 16.4924 24.2464 16.4694L25.7549 15.0277C25.7726 15.0112 25.7942 14.9992 25.8177 14.993C25.8413 14.9867 25.8661 14.9862 25.8898 14.9916L27.9257 15.5082C27.9572 15.5179 27.9911 15.5169 28.022 15.5053C28.0528 15.4938 28.0788 15.4725 28.0958 15.4448C28.1128 15.4171 28.1197 15.3846 28.1156 15.3525C28.1114 15.3204 28.0964 15.2907 28.0729 15.268L26.6012 13.7902C26.5843 13.7729 26.5722 13.7517 26.5657 13.7287C26.5593 13.7056 26.5589 13.6813 26.5644 13.658L27.0918 11.6637C27.1016 11.6328 27.1006 11.5996 27.0888 11.5694C27.0771 11.5392 27.0553 11.5137 27.027 11.4971C26.9987 11.4805 26.9655 11.4736 26.9328 11.4777C26.9 11.4818 26.8696 11.4965 26.8465 11.5195L25.3379 12.9612C25.3203 12.9777 25.2987 12.9896 25.2751 12.9959C25.2516 13.0022 25.2268 13.0027 25.203 12.9973L23.1549 12.4806C23.1244 12.4749 23.0928 12.4788 23.0646 12.4918C23.0365 12.5048 23.0133 12.5261 22.9983 12.5528C22.9833 12.5795 22.9774 12.6101 22.9813 12.6403C22.9851 12.6705 22.9987 12.6987 23.02 12.7209Z"
+                          fill="#FFC300"
+                        />
+                        <path
+                          d="M30.344 16.7507L33.8916 17.7324C33.9348 17.7424 33.9746 17.7631 34.0071 17.7926C34.0397 17.8221 34.064 17.8593 34.0776 17.9007L35.0646 21.3786C35.0822 21.4281 35.115 21.471 35.1586 21.5014C35.2022 21.5318 35.2543 21.5481 35.3078 21.5481C35.3613 21.5481 35.4134 21.5318 35.457 21.5014C35.5006 21.471 35.5334 21.4281 35.551 21.3786L36.5523 17.9007C36.5625 17.8584 36.5837 17.8194 36.6137 17.7874C36.6438 17.7555 36.6818 17.7317 36.724 17.7184L40.2716 16.7507C40.3221 16.7335 40.3659 16.7013 40.3968 16.6586C40.4278 16.6159 40.4445 16.5647 40.4445 16.5123C40.4445 16.4599 40.4278 16.4088 40.3968 16.3661C40.3659 16.3234 40.3221 16.2912 40.2716 16.2739L36.724 15.2922C36.6808 15.2823 36.641 15.2615 36.6085 15.232C36.5759 15.2026 36.5516 15.1653 36.538 15.124L35.551 11.646C35.5334 11.5965 35.5006 11.5536 35.457 11.5232C35.4134 11.4929 35.3613 11.4766 35.3078 11.4766C35.2543 11.4766 35.2022 11.4929 35.1586 11.5232C35.115 11.5536 35.0822 11.5965 35.0646 11.646L34.0633 15.124C34.0531 15.1663 34.0319 15.2053 34.0019 15.2372C33.9718 15.2692 33.9338 15.2929 33.8916 15.3063L30.344 16.2739C30.2935 16.2912 30.2497 16.3234 30.2188 16.3661C30.1878 16.4088 30.1711 16.4599 30.1711 16.5123C30.1711 16.5647 30.1878 16.6159 30.2188 16.6586C30.2497 16.7013 30.2935 16.7335 30.344 16.7507Z"
+                          fill="#FFC300"
+                        />
+                        <path
+                          d="M31.2151 26.0832C29.1408 26.1006 27.0834 25.7033 25.1607 24.914C23.238 24.1247 21.4877 22.959 20.01 21.4834C18.5322 20.0078 17.3559 18.2514 16.5485 16.3146C15.741 14.3778 15.3183 12.2987 15.3043 10.1962C15.3162 8.85004 15.4992 7.51108 15.8489 6.2124C11.9843 6.61201 8.4019 8.44557 5.79045 11.3605C3.17899 14.2755 1.72286 18.0661 1.70203 22.0035C1.70203 30.7749 8.80506 37.8905 17.5891 37.8905C24.9881 37.8905 31.1796 32.8268 32.9554 25.9872C32.3735 26.0516 31.7886 26.0836 31.2033 26.0832H31.2151Z"
+                          fill="#3FD0FF"
+                          stroke="#3FD0FF"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <!-- SVG for the sun -->
+                      <svg
+                        class="sun"
+                        width="42"
+                        height="42"
+                        viewBox="0 0 42 42"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M39.75 19.3311H37.7083C36.5562 19.3311 35.625 20.079 35.625 20.9998C35.625 21.9186 36.5562 22.6644 37.7083 22.6644H39.75C40.9 22.6644 41.8333 21.9207 41.8333 20.9998C41.8333 20.0811 40.8979 19.3311 39.75 19.3311ZM21 9.5415C19.4939 9.53683 18.0018 9.83001 16.6095 10.4042C15.2172 10.9784 13.9522 11.8222 12.8873 12.8871C11.8223 13.9521 10.9785 15.2171 10.4043 16.6094C9.83014 18.0017 9.53695 19.4938 9.54163 20.9998C9.54163 27.3561 14.6437 32.4582 21 32.4582C27.3541 32.4582 32.4583 27.3561 32.4583 20.9998C32.4583 14.6436 27.352 9.5415 21 9.5415ZM21 29.3332C16.3937 29.3332 12.6666 25.6019 12.6666 20.9998C12.6666 16.3936 16.3937 12.6665 21 12.6665C23.2101 12.6665 25.3297 13.5445 26.8925 15.1073C28.4553 16.6701 29.3333 18.7897 29.3333 20.9998C29.3333 23.21 28.4553 25.3296 26.8925 26.8924C25.3297 28.4552 23.2101 29.3332 21 29.3332ZM6.41663 20.9998C6.41663 20.0811 5.48121 19.3311 4.33329 19.3311H2.24996C1.09788 19.3311 0.166626 20.079 0.166626 20.9998C0.166626 21.9186 1.09788 22.6644 2.24996 22.6644H4.33329C5.48121 22.6644 6.41663 21.9186 6.41663 20.9998ZM21 6.4165C21.9187 6.4165 22.6645 5.48525 22.6645 4.33317V2.24984C22.6645 1.09775 21.9187 0.166504 21 0.166504C20.0791 0.166504 19.3312 1.09775 19.3312 2.24984V4.33317C19.3312 5.48525 20.0791 6.4165 21 6.4165ZM21 35.5832C20.0791 35.5832 19.3312 36.5144 19.3312 37.6665V39.7498C19.3312 40.9019 20.0791 41.8332 21 41.8332C21.9187 41.8332 22.6645 40.9019 22.6645 39.7498V37.6665C22.6645 36.5144 21.9187 35.5832 21 35.5832ZM36.3437 8.01234C37.1583 7.19775 37.2895 6.01025 36.6395 5.36025C35.9895 4.71025 34.8 4.84359 33.9895 5.65817L32.5312 7.11442C31.7166 7.929 31.5854 9.1165 32.2354 9.7665C32.8854 10.4165 34.075 10.2832 34.8875 9.46859L36.3437 8.01234ZM7.11246 32.5269L5.65413 33.9873C4.83954 34.8019 4.70829 35.9853 5.35829 36.6353C6.00829 37.2853 7.19788 37.1561 8.00829 36.3415L9.46663 34.8853C10.2812 34.0707 10.4125 32.8832 9.76246 32.2311C9.11246 31.579 7.92288 31.7165 7.11246 32.5269ZM8.01038 5.65609C7.19788 4.8415 6.00829 4.70817 5.35829 5.35817C4.70829 6.00817 4.84163 7.19775 5.65204 8.01234L7.11038 9.46859C7.92496 10.2832 9.11038 10.4165 9.76038 9.7665C10.4104 9.1165 10.2791 7.92692 9.46663 7.11442L8.01038 5.65609ZM32.5291 34.8873L33.9875 36.3436C34.802 37.1582 35.9875 37.2873 36.6375 36.6415C37.2875 35.9915 37.1562 34.8019 36.3416 33.9894L34.8854 32.5332C34.0708 31.7186 32.8833 31.5853 32.2312 32.2353C31.5791 32.8853 31.7145 34.0728 32.5291 34.8873Z"
+                          fill="#FFF500"
+                        />
+                      </svg>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-btn" data-name="register" href="/register.html">
+                REGISTER
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="line">
+        <div class="rock-container">
+          <img class="rock rock2" src="./img/Rock3.svg" alt="chat-ai-rock" />
+          <img class="rock rock3" src="./img/Rock2.svg" alt="chat-ai-rock" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero section -->
+      <section id="hero">
+        <div class="hero-content container">
+          <h1>
+            Next-Gen Chat Experience: <br />
+            Say Hello to <span>Our AI Bot</span>
+          </h1>
+          <p>
+            Amidst the ongoing technological transformation of human
+            interaction, our AI Chatbot emerges as an innovation, fundamentally
+            changing how we connect.
+          </p>
+          <a href="/">
+            <button class="primary-btn">Get started</button>
+          </a>
+          <div class="hero-img">
+            <img
+              id="hero-robot"
+              data-theme="dark"
+              src="./img/hero-robot-dark.png"
+              alt="robot-hero-chat"
+            />
+            <img
+              class="hero-robot-bg"
+              src="./img/hero-robot-light-bg.png"
+              alt=""
+            />
+            <img
+              class="hero__ask-anything ask-anything-icon"
+              data-theme="dark"
+              src="./img/ask-anything-dark.svg"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Trusted brands section -->
+      <section id="trusted-brand">
+        <div class="heading">
+          <h3>Trusted by favorite brands and startups</h3>
+        </div>
+        <div class="brands container">
+          <div class="single-brand">
+            <img
+              class="brands__brand-logo"
+              data-theme="dark"
+              src="./img/brand-logo-1-dark.svg"
+              alt="brands-logo"
+            />
+            <p class="brand-name">Company Logo</p>
+          </div>
+          <div class="single-brand">
+            <img
+              class="brands__brand-logo"
+              data-theme="dark"
+              src="./img/brand-logo-2-dark.svg"
+              alt="brands-logo"
+            />
+            <p class="brand-name">Company Logo</p>
+          </div>
+          <div class="single-brand">
+            <img
+              class="brands__brand-logo"
+              data-theme="dark"
+              src="./img/brand-logo-3-dark.svg"
+              alt="brands-logo"
+            />
+            <p class="brand-name">Company Logo</p>
+          </div>
+          <div class="single-brand">
+            <img
+              class="brands__brand-logo"
+              data-theme="dark"
+              src="./img/brand-logo-4-dark.svg"
+              alt="brands-logo"
+            />
+            <p class="brand-name">Company Logo</p>
+          </div>
+          <div class="single-brand">
+            <img
+              class="brands__brand-logo"
+              data-theme="dark"
+              src="./img/brand-logo-5-dark.svg"
+              alt="brands-logo"
+            />
+            <p class="brand-name">Company Logo</p>
+          </div>
+        </div>
+      </section>
+      <!-- Features section -->
+      <section id="feature" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
+          <div class="feature__title">
+            <h2>Chat With Ease, Less Hassle With Our Chat AI</h2>
+          </div>
+          <div class="swiper cardSwiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-1-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">Generate Anything</h3>
+                <p class="feature-card__about">
+                  Whether you're seeking inspiration for writing, art, or any
+                  creative endeavor, our chatbot is your ultimate muse. Discover
+                  a boundless creativity.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-2-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">10X Faster > CHAT PPT</h3>
+                <p class="feature-card__about">
+                  Experience lightning-fast chat presentations with CHAT PPT,
+                  boasting 10X speed. Enjoy unlimited word limits for your
+                  content.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-1-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">Unlimited Words</h3>
+                <p class="feature-card__about">
+                  Unlock boundless creativity with CHAT PPT, offering unlimited
+                  words to fuel your presentations. Effortlessly elevate your
+                  content.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-4-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">Auto Improvement</h3>
+                <p class="feature-card__about">
+                  Elevate your content effortlessly with CHAT PPT's automatic
+                  improvement feature, refining your work for maximum impact and
+                  clarity.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-5-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">Seamless Integration</h3>
+                <p class="feature-card__about">
+                  Integrate Chat AI seamlessly into your existing platforms and
+                  systems, enhancing productivity and efficiency across your
+                  organization.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide feature-card">
+                <img
+                  class="feature-card__icon"
+                  data-theme="dark"
+                  src="./img/feature-icon-6-dark.svg"
+                  alt=""
+                />
+                <h3 class="feature-card__title">Language Support</h3>
+                <p class="feature-card__about">
+                  Explore a multitude of languages and dialects with our
+                  extensive language support. Break down communication barriers
+                  and connect with people.
+                </p>
+                <a class="feature-card__link" href="#"
+                  ><span>Get Details</span>
+                  <img src="./img/feature_arrow-icon.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="feature__shadow"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Analytical section -->
+      <section id="analytic" data-aos="fade-up">
+        <div class="container analytic-content">
+          <div class="analytic-content__details">
+            <h2 class="analytic-content__details__title">
+              Every stat you need to remain successful
+            </h2>
+            <p class="analytic-content__details__para">
+              This analytical exploration equips decision-makers with a deeper
+              understanding of the factors influencing outcomes, enabling them
+              to make well-informed and strategic choices.
+            </p>
+            <a class="primary-btn analytic-content__details__btn" href="#"
+              >more details</a
+            >
+          </div>
+          <div class="analytic-content__chart">
+            <canvas id="analytic-chart"></canvas>
+          </div>
+          <div class="hollow-cube">
+            <img src="./img/hollowcube3spec.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial section -->
+      <section id="testimonial" data-aos="fade-up">
+        <div class="swiper testimonialSwiper testimonial-content">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-content__item">
+              <img src="./img/quotes-icon.png" alt="quotes icon" />
+              <p class="testimonial-content__text">
+                The AI Chatbot service has revolutionized my creative process.
+                Its constant stream of high-quality content ideas and solutions
+                has been a game changer for me.
+              </p>
+              <div class="testimonial-content__user-info">
+                <div class="testimonial-content__user-img">
+                  <img
+                    src="./img/user-profile.png"
+                    alt="user profile picture"
+                  />
+                </div>
+                <div class="testimonial-content__user-detail">
+                  <h5 class="testimonial-content__user-name">Sarah L.</h5>
+                  <span class="testimonial-content__user-type"
+                    >Content Creator</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonial-content__item">
+              <img src="./img/quotes-icon.png" alt="quotes icon" />
+              <p class="testimonial-content__text">
+                The AI Chatbot service has revolutionized my creative process.
+                Its constant stream of high-quality content ideas and solutions
+                has been a game changer for me.
+              </p>
+              <div class="testimonial-content__user-info">
+                <div class="testimonial-content__user-img">
+                  <img
+                    src="./img/user-profile.png"
+                    alt="user profile picture"
+                  />
+                </div>
+                <div class="testimonial-content__user-detail">
+                  <h5 class="testimonial-content__user-name">Sarah L.</h5>
+                  <span class="testimonial-content__user-type"
+                    >Content Creator</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonial-content__item">
+              <img src="./img/quotes-icon.png" alt="quotes icon" />
+              <p class="testimonial-content__text">
+                The AI Chatbot service has revolutionized my creative process.
+                Its constant stream of high-quality content ideas and solutions
+                has been a game changer for me.
+              </p>
+              <div class="testimonial-content__user-info">
+                <div class="testimonial-content__user-img">
+                  <img
+                    src="./img/user-profile.png"
+                    alt="user profile picture"
+                  />
+                </div>
+                <div class="testimonial-content__user-detail">
+                  <h5 class="testimonial-content__user-name">Sarah L.</h5>
+                  <span class="testimonial-content__user-type"
+                    >Content Creator</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="spec-icon rotatingImageReverse">
+            <img src="./img/testimonial-spec-Rock.svg" alt="" />
+          </div>
+          <div class="hollow-cube rotatingImage">
+            <img src="./img/testimonial-Hollow-Cube.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- Pricing section -->
+      <section id="pricing" data-aos="fade-up">
+        <div class="price-plan__header container">
+          <h6 class="secondary-title">pricing</h6>
+          <div id="price-plan-btn" class="group-btn group-btn-big">
+            <button
+              class="group-btn__item group-btn__active-item"
+              for="individual-details"
+              data-name="individual"
+            >
+              individual
+            </button>
+            <button
+              class="group-btn__item"
+              for="teams-details"
+              data-name="team"
+            >
+              teams
+            </button>
+          </div>
+        </div>
+        <!-- Individual price plan -->
+        <div
+          class="price-plan individual-price-plan container price-plan__active"
+          data-name="individual"
+        >
+          <div class="price-plan__details">
+            <h3>Chat AI Individual Plans</h3>
+            <p>
+              This individual plan empowers you with the insights needed to make
+              informed decisions and choices. <span class="short">  It provides a deeper understanding
+              of the key factors influencing outcomes, helping you navigate your
+              personal or small-scale projects with confidence and strategy.</span>
+            </p>
+            <ul>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Full Access to AI Chatbot Service for Personal Use</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Basic content generation and collaboration tools</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Personal Data Insights</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Dedicated account manager</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Priority email, live chat, and phone support</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Individual Onboarding and Training Resources</span>
+              </li>
+            </ul>
+          </div>
+          <div class="price-plan__price-info">
+            <h3>Customized Plans</h3>
+            <p class="subscription">Subscription</p>
+            <!-- group button -->
+            <div id="individual-pricing-btn" class="group-btn group-btn-small">
+              <button
+                class="group-btn__item group-btn__active-item"
+                for="monthly-price"
+                data-name="monthly"
+              >
+                monthly
+              </button>
+              <button
+                class="group-btn__item"
+                for="annual-price"
+                data-name="annual"
+              >
+                annual
+              </button>
+            </div>
+            <!-- Monthly plan -->
+            <div
+              class="pricing-data pricing-data__active price-plan__data"
+              data-name="monthly"
+            >
+              <p><del class="previous-price">$2200 Yearly</del></p>
+              <span class="saving-percentage">Save 45%</span>
+              <p>
+                <span class="dollar-icon">$</span
+                ><span class="per-month-cost__price">5.99</span>
+              </p>
+              <p>per account/month</p>
+              <p>$999 every 12 months excluding tax fee.</p>
+              <a href="#">Buy team plan</a>
+            </div>
+            <!-- Annual plan -->
+            <div class="pricing-data price-plan__data" data-name="annual">
+              <p><del class="previous-price">$1200 Yearly</del></p>
+              <span class="saving-percentage">Save 65%</span>
+              <p>
+                <span class="dollar-icon">$</span
+                ><span class="per-month-cost__price">4.99</span>
+              </p>
+              <p>per account/month</p>
+              <p>$444 every 12 months excluding tax fee.</p>
+              <a href="#">Buy team plan</a>
+            </div>
+          </div>
+        </div>
+        <!-- Team price plan -->
+        <div class="price-plan team-price-plan container" data-name="team">
+          <div class="price-plan__details">
+            <h3>Chat AI Team Plans</h3>
+            <p>
+              This analytical exploration equips decision-makers with a deeper
+              understanding of the factors influencing outcomes, enabling them
+              to make well-informed and strategic choices.
+            </p>
+            <ul>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Full access to AI Chatbot service</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Advanced content generation and collaboration tools</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Robust data insights and team analytics</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Dedicated account manager</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Priority email, live chat, and phone support</span>
+              </li>
+              <li>
+                <img src="./img/chcek.svg" />
+                <span>Customized onboarding and training for your team</span>
+              </li>
+            </ul>
+          </div>
+          <div class="price-plan__price-info">
+            <h3>Customized Plans</h3>
+            <p class="subscription">Subscription</p>
+            <!-- group button -->
+            <div id="team-pricing-btn" class="group-btn group-btn-small">
+              <button
+                class="group-btn__item group-btn__active-item"
+                for="monthly-price"
+                data-name="monthly"
+              >
+                monthly
+              </button>
+              <button
+                class="group-btn__item"
+                for="annual-price"
+                data-name="annual"
+              >
+                annual
+              </button>
+            </div>
+            <!-- Monthly plan -->
+            <div
+              class="pricing-data pricing-data__active price-plan__data"
+              data-name="monthly"
+            >
+              <p><del class="previous-price">$2200 Yearly</del></p>
+              <span class="saving-percentage">Save 45%</span>
+              <p>
+                <span class="dollar-icon">$</span
+                ><span class="per-month-cost__price">9.99</span>
+              </p>
+              <p>per account/month</p>
+              <p>$999 every 12 months excluding tax fee.</p>
+              <a href="#">Buy team plan</a>
+            </div>
+            <!-- Annual plan -->
+            <div class="pricing-data price-plan__data" data-name="annual">
+              <p><del class="previous-price">$1200 Yearly</del></p>
+              <span class="saving-percentage">Save 65%</span>
+              <p>
+                <span class="dollar-icon">$</span
+                ><span class="per-month-cost__price">6.99</span>
+              </p>
+              <p>per account/month</p>
+              <p>$666 every 12 months excluding tax fee.</p>
+              <a href="#">Buy team plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- How to use section -->
+      <section id="how-to-use" data-aos="fade-up">
+        <div class="container">
+          <h6 class="secondary-title">how to use</h6>
+          <div class="how-to-use__navigation">
+            <button
+              class="how-to-use__navigation-button how-to-use__navigation-button__active"
+              data-target="register"
+            >
+              <span class="how-to-use__counting">01</span>Register
+              <span class="next-step-arrow">
+                <img src="./img/right-arrow.svg" alt="" />
+              </span>
+            </button>
+            <button
+              class="how-to-use__navigation-button"
+              data-target="connect-with-ai"
+            >
+              <span class="how-to-use__counting">02</span>Connect with Chat AI
+              <span class="next-step-arrow">
+                <img src="./img/right-arrow.svg" alt="" />
+              </span>
+            </button>
+            <button class="how-to-use__navigation-button" data-target="advices">
+              <span class="how-to-use__counting">03</span>Get Personalized
+              Advices
+              <span class="next-step-arrow">
+                <img src="./img/right-arrow.svg" alt="" />
+              </span>
+            </button>
+            <button class="how-to-use__navigation-button" data-target="explore">
+              <span class="how-to-use__counting">04</span>Explore and Engage
+            </button>
+            <div class="how-to-use__mobile-navigation">
+              <button
+                id="htu-prev-btn"
+                class="how-to-use__mobile-navigation-button"
+              >
+                <img
+                  id="back-arrow-button-img"
+                  src="./img/back-arrow-btn-dark.svg"
+                  alt="previous button"
+                  data-theme="dark"
+                />
+              </button>
+              <button
+                id="htu-next-btn"
+                class="how-to-use__mobile-navigation-button"
+              >
+                <img
+                  id="next-arrow-button-img"
+                  src="./img/next-arrow-btn-dark.svg"
+                  alt="next button"
+                  data-theme="dark"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="how-to-use__steps">
+            <div
+              id="register"
+              class="how-to-use__step-content how-to-use__step-content__active"
+            >
+              <div class="how-to-use__content-left" data-aos="fade-up">
+                <h2 class="how-to-use__content-title">Register / Sign Up</h2>
+                <p class="how-to-use__content-about">
+                  Create an account with Chat AI by providing your name, email
+                  address, and password. Once you sign up, you can start
+                  exploring the AI.
+                </p>
+                <a
+                  href="/register.html"
+                  class="how-to-use__content-btn primary-btn"
+                  >create account</a
+                >
+              </div>
+              <div class="how-to-use__content-right">
+                <div class="how-to-use__content-image">
+                  <img src="./img/robot-reg.png" alt="" />
+                </div>
+                <img
+                  class="how-to-use__ask-anything ask-anything-icon"
+                  data-theme="dark"
+                  src="./img/ask-anything-dark.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div id="connect-with-ai" class="how-to-use__step-content">
+              <div
+                class="how-to-use__content-left"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
+                <h2
+                  class="how-to-use__content-title"
+                  data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                >
+                  Connect with Chat AI
+                </h2>
+                <p class="how-to-use__content-about">
+                  Once registered, connect to our Chat AI interface seamlessly.
+                  Whether through a web browser or mobile app, accessing our AI
+                  is convenient and user-friendly.
+                </p>
+                <a href="#" class="how-to-use__content-btn primary-btn"
+                  >Connect Now</a
+                >
+              </div>
+              <div class="how-to-use__content-right">
+                <div class="how-to-use__content-image">
+                  <img src="./img/robot-reg.png" alt="" />
+                </div>
+                <img
+                  class="how-to-use__ask-anything ask-anything-icon"
+                  data-theme="dark"
+                  src="./img/ask-anything-dark.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div id="advices" class="how-to-use__step-content">
+              <div class="how-to-use__content-left">
+                <h2 class="how-to-use__content-title">
+                  Get Personalized Advices
+                </h2>
+                <p class="how-to-use__content-about">
+                  Leverage the power of AI to receive personalized advice
+                  tailored to your needs. Our Chat AI analyzes your preferences
+                  and requirements to provide you with valuable insights and
+                  recommendations.
+                </p>
+                <a href="#" class="how-to-use__content-btn primary-btn"
+                  >Get advices</a
+                >
+              </div>
+              <div class="how-to-use__content-right">
+                <div class="how-to-use__content-image">
+                  <img src="./img/robot-reg.png" alt="" />
+                </div>
+                <img
+                  class="how-to-use__ask-anything ask-anything-icon"
+                  data-theme="dark"
+                  src="./img/ask-anything-dark.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div id="explore" class="how-to-use__step-content">
+              <div class="how-to-use__content-left">
+                <h2 class="how-to-use__content-title">Explore and Engage</h2>
+                <p class="how-to-use__content-about">
+                  Dive into a world of possibilities as you explore the
+                  versatility of our Chat AI. Engage in meaningful
+                  conversations, streamline tasks, and discover new ways to
+                  enhance your personal and professional life.
+                </p>
+                <a href="#" class="how-to-use__content-btn primary-btn"
+                  >Explore Now</a
+                >
+              </div>
+              <div class="how-to-use__content-right">
+                <div class="how-to-use__content-image">
+                  <img src="./img/robot-reg.png" alt="" />
+                </div>
+                <img
+                  class="how-to-use__ask-anything ask-anything-icon"
+                  data-theme="dark"
+                  src="./img/ask-anything-dark.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="container">
+            <img class="rock rock2" src="./img/Rock3.svg" alt="chat-ai-rock" />
+            <img class="rock rock3" src="./img/Rock2.svg" alt="chat-ai-rock" />
+          </div>
+        </div>
+      </section>
+      <!-- Boost up section -->
+      <section id="boost-up" data-aos="fade-up" data-aos-delay="100">
+        <div class="container boost-up-inner">
+          <div class="hollow-cube rotatingImage">
+            <img src="./img/boost-up-hollow-cube.png" alt="" />
+          </div>
+          <div class="hollow-cube-2 rotatingImageReverse">
+            <img src="./img/boost-up-hollow-cube-02.png" alt="" />
+          </div>
+          <div class="boost-up__header">
+            <h2 class="boost-up__header-title">Ready to Boost Up?</h2>
+            <p class="boost-up__header-text">
+              This analytical exploration equips decision-makers with a deeper
+              understanding of the factors influencing outcomes, enabling them
+              to make well-informed and strategic choices.
+            </p>
+          </div>
+          <div class="boost-up-contents">
+            <div class="boost-up-left-contents">
+              <img src="./img/boost_up.png" alt="chat-ai-boost-up" />
+            </div>
+            <div class="boost-up-right-contents">
+              <div class="inner-contents">
+                <img
+                  class="boost-up__icon"
+                  data-theme="dark"
+                  src="./img/boost-up-icon-1-dark.svg"
+                  alt=""
+                />
+                <div>
+                  <h3>Increased productivity</h3>
+                  <p>
+                    Premium includes full access to Freepik and Flaticon
+                    libraries, so you can find anything you need fast.
+                  </p>
+                </div>
+              </div>
+              <div class="inner-contents">
+                <img
+                  class="boost-up__icon"
+                  data-theme="dark"
+                  src="./img/boost-up-icon-2-dark.svg"
+                  alt=""
+                />
+                <div>
+                  <h3>Effortless Content Generation</h3>
+                  <p>
+                    Download all images you need for your projects
+                    uninterruptedly. Up to one hundred downloads per day.
+                  </p>
+                </div>
+              </div>
+              <div class="inner-contents">
+                <img
+                  class="boost-up__icon"
+                  data-theme="dark"
+                  src="./img/boost-up-icon-3-dark.svg"
+                  alt=""
+                />
+                <div>
+                  <h3>Data-Driven Insights</h3>
+                  <p>
+                    Improve your browsing experience with Premium: ad-free
+                    interface, full-licensed assets, priority support, and more.
+                  </p>
+                </div>
+              </div>
+              <a href="/">
+                <button class="primary-btn create-account-btn">
+                  Create account
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ section -->
+      <section id="faq" data-aos="fade-up">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="accordion">
+            <div class="accordion-item active">
+              <div class="accordion-header">
+                <h3>What is an AI Chatbot and how does it work?</h3>
+                <div class="accordion-icon">
+                  <span class="accordion-icon__line1"></span>
+                  <span class="accordion-icon__line2"></span>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  An AI chatbot is a virtual assistant powered by artificial
+                  intelligence that can engage in natural language
+                  conversations. It uses machine learning and natural language
+                  processing to understand user queries and provide relevant
+                  responses.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h3>How can AI chatbots benefit my business?</h3>
+                <div class="accordion-icon">
+                  <span class="accordion-icon__line1"></span>
+                  <span class="accordion-icon__line2"></span>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  AI chatbots can benefit your business by improving customer
+                  support, automating tasks, and enhancing user engagement,
+                  ultimately boosting efficiency and customer satisfaction.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h3>Is my data safe and secure with the AI chatbot?</h3>
+                <div class="accordion-icon">
+                  <span class="accordion-icon__line1"></span>
+                  <span class="accordion-icon__line2"></span>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, your data is typically safe and secure with AI chatbots,
+                  as they are designed to follow strict data privacy and
+                  security protocols.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h3>
+                  What kind of industries can benefit from using an AI chatbot?
+                </h3>
+                <div class="accordion-icon">
+                  <span class="accordion-icon__line1"></span>
+                  <span class="accordion-icon__line2"></span>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Various industries, including e-commerce, healthcare, finance,
+                  and customer service, can benefit from using AI chatbots to
+                  streamline processes and enhance customer experiences.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h3>Do I need technical expertise to set up the AI chatbot?</h3>
+                <div class="accordion-icon">
+                  <span class="accordion-icon__line1"></span>
+                  <span class="accordion-icon__line2"></span>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  You don't necessarily need technical expertise to set up an AI
+                  chatbot, as many platforms offer user-friendly interfaces and
+                  pre-built templates for easy deployment. However, technical
+                  knowledge can be helpful for customization and advanced
+                  functionalities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Productivity section -->
+      <section id="productivity" data-aos="fade-up">
+        <div class="container productivity-inner">
+          <h2>
+            Use Chat AI to save hours each day and boost your productivity to
+            maximum.
+          </h2>
+          <ul>
+            <li>AI chat = massive time saver.</li>
+            <li>Boosts productivity by focusing on high-impact tasks.</li>
+            <li>Efficiently handles common queries.</li>
+            <li>Provides real-time assistance.</li>
+            <li>Frees up time for strategic work.</li>
+            <li>Automates repetitive tasks.</li>
+          </ul>
+          <a href="/">
+            <button class="primary-btn productivity-btn">Start chatting</button>
+          </a>
+          <img
+            class="productivity-bot"
+            src="./img/productivity bot.png"
+            alt="productivity bot"
+          />
+        </div>
+      </section>
+      <!-- Embrace future section -->
+      <section id="embrace-future" data-aos="fade-up">
+        <div class="embrace-future-inner">
+          <div class="container embrace-future-inner-content">
+            <h2>
+              Embrace the future with
+              <span> Chat AI</span>
+            </h2>
+            <p>
+              Step into the future with Chat AI, a game-changing technology
+              redefining communication <br />
+              and interaction. Embrace its potential for a more connected and
+              efficient world.
+            </p>
+            <a href="/"><button class="primary-btn">get started</button></a>
+            <div class="spec-icon-1 rotatingImage">
+              <img src="./img/testimonial-spec-Rock.svg" alt="" />
+            </div>
+            <div class="spec-icon-2 rotatingImageReverse">
+              <img src="./img/testimonial-spec-Rock.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Footer content goes here -->
+      <div class="line">
+        <div class="container">
+          <img class="rock rock2" src="./img/Rock2.svg" alt="chat-ai-rock" />
+          <img class="rock rock3" src="./img/Rock2.svg" alt="chat-ai-rock" />
+        </div>
+      </div>
+      <div class="container footer-contents">
+        <div class="footer-contents-inner footer-content1">
+          <img
+            class="logo-image"
+            data-theme="dark"
+            src="./img/logo-dark.svg"
+            alt="logo"
+          />
+          <p>
+            Amidst the ongoing technological transformation of human
+            interaction, our AI Chatbot emerges as perfect fit.
+          </p>
+          <div class="social-icons">
+            <a href="/">
+              <div class="icon-container">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.28571 0C1.025 0 0 1.025 0 2.28571V13.7143C0 14.975 1.025 16 2.28571 16H13.7143C14.975 16 16 14.975 16 13.7143V2.28571C16 1.025 14.975 0 13.7143 0H2.28571ZM10.5071 7.58214C11.2036 7.91429 11.7107 8.42143 11.9786 9.04286C12.35 9.91072 12.3857 11.325 11.2571 12.45C10.3929 13.3107 9.34643 13.7 7.86071 13.7107H7.85357C6.18214 13.7 4.89643 13.1357 4.03571 12.0393C3.26786 11.0643 2.87143 9.70357 2.85714 8V7.99286C2.87143 6.28929 3.26786 4.93214 4.03571 3.95357C4.9 2.85714 6.18571 2.29286 7.85357 2.28214H7.86071C9.53572 2.29286 10.8357 2.85357 11.725 3.94643C12.1643 4.48571 12.4857 5.13571 12.6893 5.88929L11.7286 6.14643C11.5607 5.53214 11.3036 5.00714 10.9643 4.58929C10.2714 3.73571 9.225 3.3 7.85714 3.28929C6.5 3.3 5.47143 3.73571 4.80357 4.58214C4.17857 5.37857 3.85357 6.525 3.84286 7.99286C3.85357 9.46071 4.17857 10.6107 4.80357 11.4036C5.47143 12.2536 6.49643 12.6893 7.85714 12.6964C9.08214 12.6857 9.88929 12.3964 10.5643 11.7214C11.3321 10.9536 11.3179 10.0107 11.0714 9.43571C10.9286 9.1 10.6643 8.81786 10.3107 8.60357C10.225 9.24643 10.0286 9.75357 9.72143 10.1464C9.31429 10.6643 8.73214 10.9464 7.99286 10.9857C7.43214 11.0179 6.89286 10.8821 6.47143 10.6036C5.975 10.275 5.68571 9.775 5.65357 9.19286C5.59286 8.04286 6.50357 7.21786 7.92143 7.13571C8.425 7.10714 8.89643 7.12857 9.33214 7.20357C9.275 6.85 9.15714 6.57143 8.98214 6.36786C8.74286 6.08929 8.37143 5.94643 7.88214 5.94286H7.86786C7.475 5.94286 6.93929 6.05357 6.59643 6.57143L5.775 6.00714C6.23214 5.31429 6.975 4.93214 7.86429 4.93214H7.88571C9.37857 4.94286 10.2643 5.87143 10.3536 7.49643C10.4036 7.51786 10.4536 7.53929 10.5036 7.56429L10.5071 7.58214ZM7.94286 9.99286C8.55 9.96071 9.24286 9.72143 9.36071 8.25C9.04643 8.18214 8.69643 8.14643 8.325 8.14643C8.21072 8.14643 8.09643 8.15 7.98214 8.15714C6.96071 8.21429 6.62143 8.71071 6.64643 9.15357C6.67857 9.75 7.325 10.0286 7.94643 9.99643L7.94286 9.99286Z"
+                    fill="#010113"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="/">
+              <div class="icon-container">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.1663 10.0007C19.1663 4.94065 15.0597 0.833984 9.99967 0.833984C4.93967 0.833984 0.833008 4.94065 0.833008 10.0007C0.833008 14.4373 3.98634 18.1315 8.16634 18.984V12.7507H6.33301V10.0007H8.16634V7.70898C8.16634 5.93982 9.60551 4.50065 11.3747 4.50065H13.6663V7.25065H11.833C11.3288 7.25065 10.9163 7.66315 10.9163 8.16732V10.0007H13.6663V12.7507H10.9163V19.1215C15.5455 18.6632 19.1663 14.7582 19.1663 10.0007Z"
+                    fill="#010113"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="/">
+              <div class="icon-container">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 0C13.9757 0 18 4.02429 18 9C18 13.9757 13.9757 18 9 18C4.02429 18 0 13.9757 0 9C0 4.02429 4.02429 0 9 0ZM7.35429 13.7443C11.34 13.7443 13.5257 10.44 13.5257 7.57286V7.29C13.95 6.98143 14.3229 6.59571 14.6057 6.15857C14.22 6.32571 13.7957 6.44143 13.3586 6.50571C13.8086 6.23571 14.1557 5.81143 14.31 5.31C13.8857 5.55429 13.4229 5.73429 12.9343 5.83714C12.5357 5.41286 11.97 5.15571 11.3529 5.15571C10.1571 5.15571 9.18 6.13286 9.18 7.32857C9.18 7.49571 9.19286 7.66286 9.24429 7.81714C7.44429 7.72714 5.83714 6.86571 4.77 5.55429C4.59 5.87571 4.47429 6.24857 4.47429 6.64714C4.47429 7.39286 4.86 8.06143 5.43857 8.44714C5.07857 8.44714 4.74429 8.34429 4.46143 8.17714V8.20286C4.46143 9.25714 5.20714 10.1314 6.19714 10.3371C6.01714 10.3886 5.82429 10.4143 5.63143 10.4143C5.49 10.4143 5.36143 10.4014 5.22 10.3757C5.49 11.2371 6.3 11.8671 7.23857 11.88C6.49286 12.4586 5.55429 12.8057 4.53857 12.8057C4.35857 12.8057 4.19143 12.8057 4.02429 12.78C4.97571 13.3971 6.12 13.7571 7.34143 13.7571"
+                    fill="#010113"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="footer-contents-inner footer-content2">
+          <h3 class="footer-heading">Chat AI</h3>
+          <ul class="footer-links">
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">About Us</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Blog</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Sign In</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Register</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contents-inner footer-content3">
+          <h3 class="footer-heading">Our Usage</h3>
+          <ul class="footer-links">
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Ai Writting</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Business Ai</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Ai Blog Writter</a>
+            </li>
+            <li class="footer-links-item">
+              <a class="footer-link" href="/">Ai Content Writting</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contents-inner footer-content4">
+          <h3 class="footer-heading">Subscribe Now</h3>
+          <p>Receive latest news and get new updates.</p>
+          <div class="subscribe-container">
+            <input id="email" type="text" placeholder="Enter your mail" />
+            <input
+              id="submit"
+              class="primary-btn"
+              type="button"
+              value="Subscribe"
+              placeholder="Subscribe"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <hr />
+        <p class="copyright">Copyright 2023 @ innobyteX Agency</p>
+        <hr />
+      </div>
+    </footer>
+  </body>
+  <!-- AOS Script Js -->
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.refreshHard();
+  </script>
+  <!-- Navbar JS -->
+  <script src="./js/navbar.js"></script>
+
+  <!-- Pricing JS -->
+  <script src="./js/pricing.js"></script>
+
+  <!-- How-to-use Section JS -->
+  <script src="./js/how-to-use.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/card-slider.js"></script>
+  <script src="./js/testimonial-slider.js"></script>
+
+  <!-- Chart.js -->
+  <script src="./js/chart.umd.js"></script>
+  <script src="./js/analytic-chart.js"></script>
+
+  <!-- accordion.js -->
+  <script src="./js/accordion.js"></script>
+
+  <!-- day-night.js -->
+  <script src="./js/day-night.js"></script>
+
+  <script src="./js/animation.js"></script>
+</html>

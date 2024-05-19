@@ -1,0 +1,499 @@
+/* 01. day-night toggle styles  */
+* {
+  box-sizing: border-box;
+}
+
+/* .switch {
+    position: relative;
+    overflow: hidden;
+    width: 7.5rem;
+    height: 4rem;
+  } */
+
+.switch input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.moon {
+  display: none;
+}
+
+.toggle-switch:checked + .sun-moon .moon {
+  display: block;
+}
+
+.toggle-switch:checked + .sun-moon .sun {
+  display: none;
+}
+
+/* 02. day-night toggle styles changes on the elements  */
+
+/*================================= 
+    *  Basic Styles
+    ==================================*/
+
+body.night-mode {
+  background: white;
+  color: var(--primary) !important;
+}
+
+.night-mode h1 {
+  color: var(--primary) !important;
+}
+
+.night-mode h2 {
+  color: var(--primary) !important;
+}
+
+.night-mode h3 {
+  color: var(--primary) !important;
+}
+
+.night-mode h4 {
+  color: var(--primary) !important;
+}
+
+.night-mode p {
+  color: var(--primary) !important;
+}
+
+.night-mode .primary-btn {
+  background: var(--accent) !important;
+  color: white !important;
+}
+
+.night-mode .primary-btn:hover {
+  border: 1px solid var(--accent) !important;
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+
+.night-mode .line {
+  background-color: var(--primary);
+}
+
+.night-mode input {
+  caret-color: var(--tertiary);
+}
+
+/*================================= 
+  *  Header Area
+  ==================================*/
+
+.night-mode nav {
+  background-color: #ffffffef;
+}
+
+.night-mode nav #logoDark {
+  display: block;
+}
+
+.night-mode nav #logoLight {
+  display: none;
+}
+
+.night-mode a {
+  color: var(--primary) !important;
+}
+
+.night-mode nav .nav-btn {
+  color: var(--accent) !important;
+}
+
+.night-mode nav .nav-btn:hover {
+  color: white !important;
+  background-color: var(--accent) !important;
+}
+
+.night-mode nav .nav-link.navmenu__active {
+  color: var(--accent) !important;
+}
+
+.night-mode nav .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.night-mode nav .navbar__menu-icon {
+  border: 2px solid var(--accent);
+}
+
+.night-mode nav .menu-icon__bar1,
+.night-mode nav .menu-icon__bar2,
+.night-mode nav .menu-icon__bar3 {
+  background-color: var(--accent);
+}
+
+/*================================= 
+  *  Hero Area
+  ==================================*/
+.night-mode #hero::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/hero-bg-light.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -99;
+}
+
+.night-mode #hero .hero__ask-anything {
+  display: none;
+}
+
+.night-mode #hero .hero-content .hero-img {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.night-mode #hero .hero-content .hero-img .hero-robot-bg {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: -5;
+}
+
+/*================================= 
+  * Trusted brands Area
+  ==================================*/
+
+.night-mode #trusted-brand,
+.night-mode #feature {
+  background: -webkit-conic-gradient(
+    from 180deg at 50% 51.59%,
+    rgba(255, 255, 255, 0.15) 0.024922876618802547deg,
+    rgba(63, 208, 255, 0) 360deg,
+    rgba(104, 218, 255, 0) 360deg
+  ) !important;
+  background: conic-gradient(
+    from 180deg at 50% 51.59%,
+    rgba(255, 255, 255, 0.15) 0.024922876618802547deg,
+    rgba(63, 208, 255, 0) 360deg,
+    rgba(104, 218, 255, 0) 360deg
+  ) !important;
+}
+.night-mode #trusted-brand .heading {
+  border: 1px solid rgba(1, 1, 19, 0.93);
+  background: rgba(63, 208, 255, 0.08);
+}
+
+/*================================= 
+  * Features Area
+  ==================================*/
+
+.night-mode #feature .feature-card {
+  background: white !important;
+}
+
+.night-mode #feature .feature-card__about::before {
+  background: linear-gradient(transparent 80px, #ffffffe8);
+}
+
+.night-mode .feature-card__link {
+  color: var(--primary) !important;
+}
+
+.night-mode #feature .feature-card__about {
+  overflow: hidden;
+}
+
+.night-mode #feature .swiper-pagination-bullet-active,
+.night-mode #testimonial .swiper-pagination-bullet-active {
+  background-color: var(--primary);
+}
+
+.night-mode #feature .swiper-pagination-bullet-active::before,
+.night-mode #testimonial .swiper-pagination-bullet-active::before {
+  content: "";
+  border: 1px solid var(--primary);
+}
+
+.night-mode #feature .swiper .feature__shadow {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(1, 1, 19, 0) 0%,
+    rgba(121, 203, 249, 0.1) 71.9%
+  );
+  filter: blur(25px);
+}
+
+/*================================= 
+  * Analytical Area
+  ==================================*/
+
+/*================================= 
+  *  Testimonial Area
+  ==================================*/
+.night-mode #testimonial {
+  background-image: url("/img/testimonial-bg-light.png");
+  box-shadow: none;
+}
+
+.night-mode #testimonial .testimonial-content__user-info {
+  color: var(--primary);
+}
+
+/*================================= 
+  * Pricing Area
+  ==================================*/
+
+.night-mode #pricing .group-btn__item {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.night-mode #pricing .group-btn__item.group-btn__active-item {
+  color: white !important;
+  background-color: var(--primary);
+}
+
+.night-mode #pricing .dollar-icon,
+.night-mode #pricing .per-month-cost__price {
+  color: var(--primary) !important;
+}
+
+.night-mode #pricing .price-plan__price-info a {
+  color: white !important;
+}
+
+.night-mode #pricing .price-plan__price-info a:hover {
+  color: var(--accent) !important;
+}
+
+/*================================= 
+  * How to use Area
+  ==================================*/
+
+.night-mode #how-to-use .how-to-use__navigation-button {
+  color: var(--primary) !important;
+  opacity: 1;
+}
+
+.night-mode
+  #how-to-use
+  .how-to-use__navigation-button.how-to-use__navigation-button__active {
+  color: var(--accent) !important;
+}
+
+.night-mode #how-to-use .how-to-use__counting {
+  color: var(--primary) !important;
+}
+
+.night-mode #how-to-use .how-to-use__content-image img {
+  background-image: url("/img/how-to-use-bg-light.png");
+}
+
+/*================================= 
+  * Boost up Area
+  ==================================*/
+
+/*================================= 
+  * FAQ Area
+  ==================================*/
+
+.night-mode #faq .accordion-item.active .accordion-header h3 {
+  color: var(--accent) !important;
+}
+
+.night-mode #faq .accordion-icon__line1,
+.night-mode #faq .accordion-icon__line2 {
+  background-color: var(--primary);
+}
+
+.night-mode #faq .accordion-item.active .accordion-icon__line1,
+.night-mode #faq .accordion-item.active .accordion-icon__line2 {
+  background-color: var(--accent);
+}
+
+/*================================= 
+  * Productivity Area
+  ==================================*/
+.night-mode #productivity .productivity-inner {
+  border: 3px solid rgba(139, 159, 188, 0.25);
+  background-color: rgba(63, 208, 255, 0.06);
+}
+
+.night-mode #productivity .productivity-inner ul li {
+  color: var(--primary);
+}
+
+.night-mode #productivity .productivity-inner .productivity-btn {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+.night-mode #productivity .productivity-inner .productivity-btn:hover {
+  border: 1px solid var(--primary) !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+}
+
+/*================================= 
+  * Embrace future section
+  ==================================*/
+.night-mode #embrace-future .embrace-future-inner {
+  text-align: center;
+  background: url(../img/embrace-feature-bg-light.png) no-repeat;
+  background-position: center;
+  box-shadow: none;
+}
+
+/*================================= 
+  * Footer Area
+  ==================================*/
+
+.night-mode footer .footer-contents .social-icons .icon-container {
+  border: 1px solid var(--primary) !important;
+  background: transparent;
+}
+
+.night-mode footer .footer-contents .footer-contents-inner #submit:hover {
+  background: var(--accent) !important;
+  color: white !important;
+}
+
+.night-mode
+  footer
+  .footer-contents
+  .footer-links
+  .footer-links-item
+  .footer-link:hover {
+  color: var(--accent) !important;
+}
+
+/*================================= 
+    * Register Page Area
+    ==================================*/
+
+.night-mode
+  #register
+  .register-contents
+  .register-content-right
+  .register-right-main {
+  background-color: white !important;
+}
+
+.night-mode
+  #register
+  .register-contents
+  .register-content-right
+  .register-with-other-media {
+  display: none;
+}
+
+.night-mode
+  #register
+  .register-contents
+  .register-content-right
+  .register-with-other-media-day {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+/*================================= 
+  * 15. Responsiveness
+  ==================================*/
+
+/* Landscape tablets and medium desktops */
+@media only screen and (max-width: 1200px) {
+  /* -------- navbar CSS ----------- */
+
+  .night-mode nav .navbar-nav {
+    background-color: white !important;
+  }
+
+  /* -------- Testimonial Section CSS ------------ */
+
+  /* -------- Pricing Section CSS */
+
+  /* --------- How-to-use Section CSS -------- */
+
+  /* -------- Footer Section CSS -------- */
+}
+
+/* Portrait tablets and small desktops */
+@media only screen and (max-width: 992px) {
+  /* ------- Navbar Section CSS --------- */
+
+  .night-mode nav .navbar-nav {
+    background-color: white !important;
+  }
+
+  /* ------- Hero Section CSS -------- */
+
+  /* -------- Trusted Brand Section CSS -------- */
+
+  /* ------- Analytical section-------- */
+
+  /* -------- Pricing Section CSS ---------- */
+
+  /* -------- How-To-Use Section CSS -------- */
+
+  /* -------- Boost-up Section CSS -------- */
+
+  /* -------- Embrace future Section  CSS -------- */
+}
+
+/* Landscape smartphones and Portrait tablets */
+@media only screen and (max-width: 768px) {
+  /* -------- navbar CSS ----------- */
+
+  .night-mode nav .navbar-nav {
+    background-color: white !important;
+  }
+
+  /* ------- Hero Section CSS -------- */
+
+  /* -------- Feature Section CSS -------- */
+
+  /* ------- Analytical section-------- */
+
+  /* ------- Pricing Section CSS --------- */
+
+  /* -------- Productivity Section CSS -------- */
+
+  /* -------- Embrace future Section  CSS -------- */
+
+  /* -------- Footer Section CSS -------- */
+}
+
+/* smartphones */
+@media only screen and (max-width: 576px) {
+  /* -------- navbar CSS ----------- */
+
+  .night-mode nav .navbar-nav {
+    background-color: white !important;
+  }
+
+  /* ------- Hero Section CSS -------- */
+
+  /* -------- Trusted Brand Section CSS -------- */
+  .night-mode #trusted-brand .heading {
+    border: none;
+    background: none;
+  }
+
+  /* -------- Testimonial Section CSS -------- */
+
+  /* -------- How-To-Use Section CSS -------- */
+
+  /* -------- Boost-up Section CSS -------- */
+
+  /* -------- Embrace future Section  CSS -------- */
+
+  /* -------- Footer Section CSS -------- */
+}

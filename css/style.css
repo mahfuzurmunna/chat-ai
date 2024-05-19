@@ -1,0 +1,1965 @@
+/*---------------------------------------------------------------
+
+    Template Name: Chat AI - Next-Gen Chat Experience: Say Hello to Our AI Bot
+    Template URL: [demo url]
+    Description: TNext-Gen Chat Experience: Say Hello to Our AI Bot
+    Author: innobyteX
+    Author URL: https://themeforest.net/user/innobytex
+    Version: 1.0
+
+-----------------------------------------------------------------
+
+    CSS INDEX
+    ==================
+
+    01. Basic Styles
+    02. Header Area
+    03. Hero Area
+    04. Trusted brands Area
+    05. Features Area
+    06. Analytical Area
+    07. Testimonial Area
+    08. Pricing Area
+    09. How to use Area
+    10. Boost up Area
+    11. FAQ Area
+    12. Productivity Area
+    13. Embrace future Area
+    14. Footer Area
+    15. Responsiveness
+
+----------------------------------------------------------------*/
+
+/* fonts here */
+
+/* 01. Space Grotesk  */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+/*================================= 
+* 1. Basic Styles
+==================================*/
+
+:root {
+  --primary: #010113;
+  --secondary: #cceaff;
+  --tertiary: #8b9fbc;
+  --accent: #3fd0ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -0.48px;
+}
+
+p {
+  line-height: 30px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--tertiary);
+  line-height: 32px;
+  letter-spacing: -0.36px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: var(--tertiary);
+}
+
+h1 {
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+h2 {
+  font-size: 4.6rem;
+  line-height: 60px;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+span {
+  font-size: 2rem;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.primary-btn {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 30px;
+  color: #010113;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  margin: 10px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: transparent;
+  color: var(--secondary);
+}
+
+.line {
+  width: 100%;
+  height: 1.5px;
+  background-color: rgba(204, 234, 255, 0.3);
+  position: relative;
+}
+
+.rock2 {
+  bottom: -6px;
+  position: absolute;
+  left: 55px;
+}
+
+.rock3 {
+  bottom: -6px;
+  position: absolute;
+  right: 55px;
+}
+/*================================= 
+* 02. Header Area
+==================================*/
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+nav {
+  padding: 16px 55px;
+  margin: 0px auto;
+  background-color: #010113ee;
+}
+
+nav .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+nav .navbar .logo {
+  margin-left: -5px;
+}
+
+nav #logoLight {
+  display: block;
+}
+
+nav #logoDark {
+  display: none;
+}
+
+nav .navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 0px;
+}
+
+nav .nav-item {
+  display: block;
+  list-style: none;
+}
+
+nav .nav-link {
+  text-decoration: none;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  color: var(--tertiary);
+}
+
+nav .nav-item:first-child,
+nav .nav-item:nth-child(5) {
+  margin-left: auto;
+}
+
+nav .nav-link:hover {
+  color: var(--secondary);
+}
+
+nav .nav-btn {
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  padding: 12px 26px;
+  border-radius: 25px;
+  border: 1.5px solid var(--secondary);
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+nav .nav-btn.nav-btn__active {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+nav .nav-btn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+nav .account-links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+nav .navbar__menu-icon {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  cursor: pointer;
+  border: 2px solid var(--secondary);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+nav .menu-icon__bar1,
+nav .menu-icon__bar2,
+nav .menu-icon__bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary);
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+nav .menu-icon__bar2 {
+  width: 30px;
+}
+
+nav .change .menu-icon__bar1 {
+  width: 30px;
+  transform: translate(0, 11px) rotate(-45deg);
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
+}
+
+nav .change .menu-icon__bar3 {
+  width: 30px;
+  transform: translate(0, -12px) rotate(45deg);
+  -webkit-transform: translate(0, -12px) rotate(45deg);
+}
+
+nav .change .menu-icon__bar2 {
+  opacity: 0;
+}
+
+nav .nav-link.navmenu__active {
+  color: var(--secondary);
+}
+
+/*================================= 
+* 03. Hero Area
+==================================*/
+
+#hero {
+  background-image: none !important;
+  padding-top: 75px;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/hero-bg-dark2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -99;
+}
+
+#hero .hero-content h1 {
+  font-size: 6.2rem;
+  line-height: 75px;
+}
+
+#hero .hero-content span {
+  font-size: 5.6rem;
+  color: var(--accent);
+}
+
+#hero .hero-content p {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+#hero .hero-content a {
+  text-decoration: none;
+}
+
+#hero .hero-content button {
+  margin: 30px auto;
+  font-size: 2.4rem;
+}
+
+#hero .hero-content .hero-img {
+  max-width: 600px;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-62%);
+  -webkit-transform: translateX(-62%);
+  z-index: 1;
+}
+
+#hero .hero-content .hero-img .hero-robot-bg {
+  display: none;
+}
+
+#hero .hero-img .hero__ask-anything {
+  position: absolute;
+  top: 95px;
+  left: -145px;
+}
+/*================================= 
+* 04. Trusted brands Area
+==================================*/
+
+#trusted-brand {
+  padding: 75px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+#trusted-brand .heading {
+  width: fit-content;
+  margin: 0 20px;
+  text-align: center;
+  padding: 15px 30px;
+  border: 1px solid var(--secondary);
+  border-radius: 40px;
+  background: rgba(45, 187, 235, 0.1);
+  filter: blur(0.3px);
+  backdrop-filter: blur(15px);
+}
+
+#trusted-brand .brands {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#trusted-brand .single-brand {
+  flex: 0 0 auto;
+  width: 20%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#trusted-brand .single-bran .brand-name {
+  color: var(--secondary);
+}
+
+/*================================= 
+* 05. Features Area
+==================================*/
+
+#feature {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0;
+}
+
+#feature .feature__title {
+  display: flex;
+  justify-content: center;
+}
+
+#feature .feature__title h2 {
+  text-align: center;
+  max-width: 700px;
+}
+
+#feature .feature-card {
+  max-width: 395px;
+  height: 370px;
+  border-radius: 30px;
+  border: 1.25px solid var(--secondary);
+  background: var(--primary);
+  padding: 32px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#feature .feature-card__title {
+  font-weight: 500;
+  margin: 20px 0 18px 0;
+}
+
+#feature .feature-card__about {
+  line-height: 28px;
+  margin-bottom: 32px;
+  height: 130px;
+  overflow: hidden;
+  position: relative;
+}
+
+#feature .feature-card__about::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(transparent 80px, #010113e8);
+}
+
+#feature .feature-card__link {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+}
+
+#feature .feature-card__link img {
+  height: 18px;
+  width: 18px;
+}
+
+#feature .swiper {
+  width: 100%;
+  padding-top: 80px;
+  overflow: visible;
+  position: relative;
+}
+
+#feature .swiper-pagination,
+#testimonial .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: static;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+#feature .swiper-pagination-bullet,
+#testimonial .swiper-pagination-bullet {
+  height: 6px;
+  width: 6px;
+  background-color: var(--tertiary);
+  position: relative;
+  opacity: 1;
+}
+
+#feature .swiper-pagination-bullet-active,
+#testimonial .swiper-pagination-bullet-active {
+  background-color: var(--secondary);
+}
+
+#feature .swiper-pagination-bullet-active::before,
+#testimonial .swiper-pagination-bullet-active::before {
+  content: "";
+  border: 1px solid var(--secondary);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  padding: 0;
+}
+
+#feature .swiper .feature__shadow {
+  display: inline-block;
+  width: 483px;
+  height: 471px;
+  border-radius: 483px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(121, 203, 249, 0.15) 0%,
+    rgba(1, 1, 19, 0.25) 100%
+  );
+  filter: blur(12.5px);
+  -webkit-filter: blur(12.5px);
+  position: absolute;
+  top: -80px;
+  left: -150px;
+}
+
+/*================================= 
+* 06. Analytical Area
+==================================*/
+
+#analytic {
+  padding: 75px 0;
+}
+
+#analytic .analytic-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#analytic .analytic-content__details,
+#analytic .analytic-content__chart {
+  flex: 0 0 auto;
+  width: 46%;
+}
+
+#analytic .analytic-content__details__para {
+  padding: 30px 0;
+}
+
+#analytic .analytic-content__details__btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 12px 22px;
+}
+
+#analytic .hollow-cube {
+  position: absolute;
+  right: -80px;
+  top: -100px;
+}
+
+/*================================= 
+* 07. Testimonial Area
+==================================*/
+
+#testimonial {
+  background-image: url("/img/testimonial-bg-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 75px 0;
+  position: relative;
+  box-shadow: 0 0 8px 8px var(--primary) inset;
+}
+
+#testimonial .testimonial-content__item {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial .testimonial-content {
+  position: relative;
+}
+
+#testimonial .testimonial-content__text {
+  color: var(--secondary);
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.72px;
+  max-width: 800px;
+  padding: 30px 30px;
+  cursor: grab;
+}
+
+#testimonial .testimonial-content__user-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+  color: var(--tertiary);
+}
+
+#testimonial .testimonial-content__user-img img {
+  border-radius: 100%;
+  overflow: hidden;
+  height: 70px;
+}
+
+#testimonial .testimonial-content__user-name {
+  font-size: 2.2rem;
+}
+
+#testimonial .testimonial-content__user-type {
+  font-size: 1.8rem;
+}
+
+#testimonial .swiper-pagination {
+  padding-top: 40px;
+}
+
+#testimonial .hollow-cube {
+  position: absolute;
+  bottom: 20px;
+  right: 300px;
+}
+
+#testimonial .spec-icon {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+}
+
+#testimonial::before {
+  content: "";
+  width: 300px;
+  height: 1px;
+  opacity: 0.5;
+  background: #8b9fbc;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+}
+
+#testimonial::after {
+  content: "";
+  width: 300px;
+  height: 1px;
+  opacity: 0.5;
+  background: #8b9fbc;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+}
+
+/*================================= 
+* 08. Pricing Area
+==================================*/
+
+#pricing {
+  padding: 75px 0;
+}
+
+#pricing h3 {
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -0.72px;
+}
+
+#pricing .price-plan__header {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.secondary-title {
+  display: block;
+  color: var(--accent);
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#pricing .price-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#pricing .price-plan__details,
+#pricing .price-plan__price-info {
+  border: 2px solid var(--tertiary);
+  border-radius: 40px;
+  padding: 45px 40px;
+}
+
+#pricing .price-plan__details {
+  flex: 0 0 auto;
+  width: 60%;
+}
+
+#pricing .price-plan__details p {
+  padding: 10px 0;
+  font-weight: 300;
+}
+
+#pricing .price-plan__details ul {
+  list-style-type: none;
+}
+
+#pricing .price-plan__details ul li {
+  margin-top: 20px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#pricing .price-plan__price-info {
+  flex: 0 0 auto;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+#pricing .price-plan__price-info p {
+  font-size: 1.6rem;
+}
+
+#pricing .price-plan__price-info .subscription {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+#pricing .previous-price {
+  display: inline-block;
+  position: relative;
+  font-size: inherit;
+}
+
+#pricing .saving-percentage {
+  display: block;
+  font-weight: 400;
+  text-decoration-line: underline;
+  color: #d6cf3b;
+}
+
+#pricing .dollar-icon {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 3px;
+}
+
+#pricing .per-month-cost__price {
+  display: inline-block;
+  font-size: 8rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 20px 0;
+}
+
+#pricing .price-plan__price-info a {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 13px;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  margin-top: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--accent);
+}
+
+#pricing .price-plan__price-info a:hover {
+  background-color: transparent;
+  color: var(--secondary);
+}
+
+#pricing .group-btn {
+  border: 1px solid var(--tertiary);
+  border-radius: 40px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 350px;
+}
+
+#pricing .group-btn-small {
+  min-width: 250px;
+}
+
+#pricing .group-btn__item {
+  display: inline-block;
+  width: 50%;
+  border-radius: 40px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+}
+
+#pricing .group-btn-small .group-btn__item {
+  padding: 8px 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#pricing .group-btn-big .group-btn__item {
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#pricing input {
+  visibility: hidden;
+}
+
+#pricing .price-plan {
+  display: none;
+}
+
+#pricing .price-plan.price-plan__active {
+  display: flex;
+}
+
+#pricing .group-btn__item.group-btn__active-item {
+  background-color: var(--tertiary);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#pricing .price-plan__data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#pricing .pricing-data {
+  display: none;
+}
+
+#pricing .pricing-data.pricing-data__active {
+  display: flex;
+}
+
+/*================================= 
+* 09. How to use Area
+==================================*/
+
+#how-to-use {
+  /* display: none; */
+  padding: 75px 0;
+}
+
+#how-to-use .how-to-use__navigation {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+#how-to-use .how-to-use__navigation-button {
+  flex: 0 0 auto;
+  width: 22%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--tertiary);
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+#how-to-use .how-to-use__counting {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+}
+
+#how-to-use .next-step-arrow {
+  position: absolute;
+  right: -50px;
+  display: none;
+  transition: all 0.6s ease-out;
+  -webkit-transition: all 0.6s ease-out;
+}
+
+#how-to-use
+  .how-to-use__navigation-button.how-to-use__navigation-button__active {
+  opacity: 1;
+  border-bottom: 1px solid var(--accent);
+  border-image-slice: 1;
+  position: relative;
+}
+
+#how-to-use .how-to-use__navigation-button__active .next-step-arrow {
+  display: block;
+}
+
+#how-to-use .how-to-use__steps {
+  margin: 50px 0 150px 0;
+}
+
+#how-to-use .how-to-use__step-content {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#how-to-use .how-to-use__step-content.how-to-use__step-content__active {
+  display: flex;
+}
+
+#how-to-use .how-to-use__content-left,
+#how-to-use .how-to-use__content-right {
+  flex: 0 0 auto;
+  width: 46%;
+}
+
+#how-to-use .how-to-use__content-about {
+  margin: 25px 0 50px 0;
+  max-width: 550px;
+}
+
+#how-to-use .how-to-use__content-btn {
+  display: inline-block;
+}
+
+#how-to-use .how-to-use__content-right {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+#how-to-use .how-to-use__content-image {
+  position: relative;
+  width: fit-content;
+}
+
+#how-to-use .how-to-use__content-image img {
+  background-image: url("/img/how-to-use-bg-dark.png");
+  padding: 60px;
+  border-radius: 50px;
+}
+
+#how-to-use .how-to-use__ask-anything {
+  position: absolute;
+  left: 50px;
+  bottom: -50px;
+}
+
+#how-to-use .how-to-use__mobile-navigation {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+#how-to-use .how-to-use__mobile-navigation-button {
+  background-color: transparent;
+  border: none;
+}
+
+/*================================= 
+* 10. Boost up Area
+==================================*/
+
+#boost-up {
+  text-align: center;
+  padding: 75px 0px;
+}
+
+#boost-up .boost-up-inner {
+  position: relative;
+}
+
+#boost-up .boost-up__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#boost-up .boost-up__header-text {
+  max-width: 900px;
+  text-align: center;
+}
+
+#boost-up .boost-up-inner .hollow-cube {
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+#boost-up .boost-up-inner .hollow-cube-2 {
+  position: absolute;
+  bottom: -65px;
+  right: 0;
+}
+
+#boost-up a {
+  text-decoration: none;
+}
+
+#boost-up .boost-up-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0px;
+  gap: 100px;
+}
+
+#boost-up .boost-up-left-contents {
+  width: 1000px;
+}
+
+#boost-up .boost-up-right-contents {
+  text-align: left;
+}
+
+#boost-up .boost-up-right-contents .inner-contents {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+#boost-up .boost-up-right-contents .inner-contents h3 {
+  margin-bottom: 10px;
+}
+
+#boost-up .boost-up-right-contents .create-account-btn {
+  margin: 0px;
+}
+
+/*================================= 
+* 11. FAQ Area
+==================================*/
+#faq h2 {
+  text-align: center;
+}
+
+#faq .accordion {
+  width: 100%;
+  margin: 50px 0;
+}
+
+#faq .accordion-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#faq .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0px 35px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--tertiary);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+#faq .accordion-item.active .accordion-header {
+  padding-bottom: 30px;
+}
+
+#faq .accordion-content {
+  display: none;
+  padding: 10px 0 20px 0;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  position: relative;
+  top: 30px;
+}
+
+#faq .accordion-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+#faq .accordion-icon__line1,
+#faq .accordion-icon__line2 {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--secondary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  margin-top: 5px;
+  -webkit-transform: translateY(-50%);
+  -webkit-transition: transform 0.2s ease;
+}
+
+#faq .accordion-item.active .accordion-header h3 {
+  color: var(--accent);
+}
+
+#faq .accordion-item.active .accordion-header {
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+#faq .accordion-item.active .accordion-content {
+  display: block;
+  opacity: 1;
+  height: fit-content;
+  top: 0px;
+  border-bottom: 1px solid var(--tertiary);
+}
+
+#faq .accordion-icon__line1 {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+
+#faq .accordion-item.active .accordion-icon__line1 {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+/*================================= 
+* 12. Productivity Area
+==================================*/
+
+#productivity {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+#productivity a {
+  text-decoration: none;
+}
+
+#productivity .productivity-inner {
+  background: url(../img/productivity-grid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  position: relative;
+  padding: 50px;
+  border-radius: 20px;
+  border: 3px solid rgba(139, 159, 188, 0.1);
+}
+
+#productivity .productivity-inner h2 {
+  max-width: 1000px;
+}
+
+#productivity .productivity-inner ul {
+  list-style-position: inside;
+  margin: 40px 0px 70px 0px;
+}
+
+#productivity .productivity-inner ul li {
+  color: var(--tertiary);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
+
+#productivity .productivity-inner .productivity-btn {
+  margin: 0;
+}
+
+#productivity .productivity-inner .productivity-bot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+}
+
+/*================================= 
+ * 13. Embrace future section
+==================================*/
+#embrace-future {
+  margin: 50px auto;
+}
+
+#embrace-future .embrace-future-inner {
+  text-align: center;
+  background: url(../img/embrace-feature-bg-dark.png) no-repeat;
+  background-position: center;
+  height: fit-content;
+  width: 100%;
+  box-shadow: 0 0 8px 8px var(--primary) inset;
+  position: relative;
+}
+
+#embrace-future .embrace-future-inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 300px 0;
+}
+
+#embrace-future .embrace-future-inner-content h1 {
+  max-width: 700px;
+}
+
+#embrace-future .embrace-future-inner-content span {
+  color: var(--accent);
+  font-size: 5rem;
+}
+
+#embrace-future .embrace-future-inner-content p {
+  margin: 20px 0;
+}
+
+#embrace-future .embrace-future-inner-content button {
+  margin: 30px auto;
+}
+
+#embrace-future .spec-icon-1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+#embrace-future .spec-icon-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+}
+
+/*================================= 
+* 14. Footer Area
+==================================*/
+
+footer {
+  padding: 0 0 50px 0px;
+}
+
+footer .footer-contents {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 100px 0px;
+}
+
+footer .footer-contents .social-icons {
+  display: flex;
+  gap: 25px;
+  margin: 20px 0px;
+}
+
+footer .footer-contents .social-icons .icon-container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-contents .footer-contents-inner h3 {
+  margin-bottom: 20px;
+}
+
+footer .footer-contents .footer-contents-inner .subscribe-container {
+  display: flex;
+}
+
+footer .footer-contents .footer-contents-inner #email {
+  padding: 20px 15px;
+  margin-top: 25px;
+  border-radius: 60px;
+  background: transparent;
+  border: 1px solid var(--tertiary) !important;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  color: white;
+}
+
+footer .footer-contents .footer-contents-inner #email:focus-visible {
+  /* background-color: none !important;
+  border: 1px transparent !important; */
+  outline: 1px solid var(--tertiary) !important;
+}
+
+footer .footer-contents .footer-contents-inner #email::placeholder {
+  color: var(--tertiary);
+}
+
+footer .footer-contents .footer-contents-inner #submit {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  margin: 25px 0px 0px -80px;
+  padding: 20px 35px;
+}
+
+footer .footer-contents .footer-contents-inner #submit:hover {
+  background-color: var(--secondary);
+  color: #010113;
+}
+
+footer .footer-contents .footer-links .footer-links-item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+footer .footer-contents .footer-links .footer-links-item .footer-link {
+  color: var(--tertiary);
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+footer .footer-contents .footer-links .footer-links-item .footer-link:hover {
+  color: var(--secondary);
+}
+
+footer .copyright {
+  text-align: center;
+}
+
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+}
+
+footer .footer-bottom hr {
+  width: 60px;
+  height: 1px;
+  /* opacity: 0.5; */
+  background-color: var(--tertiary);
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+/*================================= 
+* 15. Responsiveness
+==================================*/
+
+/* Landscape tablets and medium desktops */
+@media only screen and (max-width: 1200px) {
+  nav .navbar .logo #logoLink .logo-image {
+    max-width: 85%;
+  }
+
+  /* -------- navbar CSS ----------- */
+  nav .navbar-nav {
+    gap: 35px;
+  }
+
+  nav .nav-link {
+    font-size: 1.8rem;
+  }
+
+  /* -------- Testimonial Section CSS ------------ */
+  #testimonial::before,
+  #testimonial::after,
+  #testimonial .spec-icon,
+  #testimonial .hollow-cube {
+    display: none;
+  }
+
+  /* -------- Pricing Section CSS */
+  #pricing .price-plan__details {
+    width: 55%;
+  }
+
+  #pricing .price-plan__price-info {
+    width: 40%;
+  }
+
+  /* --------- How-to-use Section CSS -------- */
+  #how-to-use .how-to-use__navigation-button {
+    display: none;
+  }
+
+  #how-to-use
+    .how-to-use__navigation-button.how-to-use__navigation-button__active
+    .next-step-arrow {
+    display: none;
+  }
+
+  #how-to-use
+    .how-to-use__navigation-button.how-to-use__navigation-button__active {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+
+  #how-to-use .how-to-use__mobile-navigation {
+    display: flex;
+    gap: 15px;
+  }
+
+  #how-to-use .how-to-use__ask-anything {
+    left: -50px;
+    bottom: -30px;
+  }
+
+  /* -------- Footer Section CSS -------- */
+  footer .footer-content1 {
+    grid-area: c1;
+  }
+
+  footer .footer-content2 {
+    grid-area: c2;
+  }
+
+  footer .footer-content3 {
+    grid-area: c3;
+  }
+
+  footer .footer-content4 {
+    grid-area: c4;
+  }
+
+  footer .footer-contents {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "c1 c1 c2 c3"
+      "c4 c4 c4 c4";
+  }
+
+  footer .footer-contents .footer-contents-inner.footer-content4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+
+  /* ------- Navbar Section CSS --------- */
+  nav {
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  nav .navbar-nav {
+    padding-top: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    position: absolute;
+    left: 0;
+    top: 86px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+  }
+
+  nav .nav-item:first-child,
+  nav .nav-item:last-child {
+    margin-left: 0;
+  }
+  nav .nav-item:nth-child(5) {
+    margin-left: 0;
+  }
+
+  nav .navbar__menu-icon {
+    display: flex;
+  }
+
+  /* ------- Hero Section CSS -------- */
+  #hero {
+    padding-top: 50px;
+  }
+
+  #hero .hero-content .hero-img {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+
+  #hero .hero-img .hero__ask-anything {
+    display: none;
+  }
+
+  /* -------- Trusted Brand Section CSS -------- */
+  #trusted-brand .brands {
+    justify-content: center;
+    row-gap: 50px;
+  }
+
+  #trusted-brand .brands .single-brand {
+    width: 33.33%;
+  }
+
+  /* ------- Analytical section-------- */
+  #analytic .analytic-content {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  #analytic .analytic-content__details,
+  #analytic .analytic-content__chart {
+    width: 100%;
+  }
+
+  /* -------- Pricing Section CSS ---------- */
+  #pricing .price-plan {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  #pricing .price-plan__details,
+  #pricing .price-plan__price-info {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  /* -------- How-To-Use Section CSS -------- */
+  #how-to-use .how-to-use__content-left,
+  #how-to-use .how-to-use__content-right {
+    width: 100%;
+  }
+
+  #how-to-use .how-to-use__content-right {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  /* -------- Boost-up Section CSS -------- */
+
+  #boost-up .boost-up__header {
+    align-items: start;
+  }
+
+  #boost-up .boost-up__header-title,
+  #boost-up .boost-up__header-text {
+    text-align: left;
+  }
+
+  #boost-up .boost-up-contents {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  #boost-up .boost-up-left-contents {
+    text-align: center;
+    order: 2;
+  }
+
+  #boost-up .boost-up-inner .hollow-cube,
+  #boost-up .boost-up-inner .hollow-cube-2 {
+    display: none;
+  }
+
+  /* -------- Embrace future Section  CSS -------- */
+  #embrace-future .embrace-future-inner-content {
+    padding: 200px 0;
+  }
+
+  #embrace-future .spec-icon-1 {
+    display: none;
+  }
+
+  #embrace-future .spec-icon-2 {
+    display: none;
+  }
+}
+
+/* Landscape smartphones and Portrait tablets */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+
+  #feature,
+  #analytic,
+  #testimonial,
+  #pricing,
+  #how-to-use,
+  #boost-up {
+    padding: 60px 0;
+  }
+
+  nav .nav-item:nth-child(5) {
+    margin-left: 0;
+  }
+
+  /* ------- Hero Section CSS -------- */
+  #hero {
+    padding-top: 20px;
+  }
+
+  #hero .hero-content p {
+    width: 90%;
+  }
+
+  #hero .hero-content button {
+    font-size: 2rem;
+  }
+
+  /* -------- Feature Section CSS -------- */
+  #feature .feature__title h2 {
+    text-align: left;
+  }
+
+  /* ------- Analytical section-------- */
+  #analytic .analytic-content__chart {
+    width: 100%;
+  }
+
+  /* ------- Pricing Section CSS --------- */
+  #pricing .group-btn {
+    min-width: 250px;
+  }
+
+  #pricing .group-btn-big .group-btn__item {
+    font-size: 1.6rem;
+  }
+
+  /* ------- How to use section --------- */
+  #how-to-use .how-to-use__ask-anything {
+    display: none;
+  }
+
+  /* -------- Productivity Section CSS -------- */
+
+  #productivity .productivity-inner {
+    padding: 40px 20px 0 20px;
+    overflow: hidden;
+  }
+
+  #productivity .productivity-inner .productivity-bot {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  #productivity .productivity-inner .productivity-bot {
+    transform: scale(115%);
+    -webkit-transform: scale(115%);
+  }
+
+  /* -------- Embrace future Section  CSS -------- */
+  #embrace-future .embrace-future-inner-content {
+    padding: 150px 0;
+  }
+
+  /* -------- Footer Section CSS -------- */
+  footer .footer-contents {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "c1 c1"
+      "c2 c3"
+      "c4 c4";
+  }
+}
+
+/* smartphones */
+@media only screen and (max-width: 576px) {
+  p {
+    line-height: 28px;
+    font-size: 1.8rem;
+  }
+  a {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.2rem !important;
+    line-height: 46px;
+  }
+  h3 {
+    font-size: 2.4rem !important;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  #feature,
+  #analytic,
+  #testimonial,
+  #pricing,
+  #how-to-use,
+  #boost-up {
+    padding: 45px 0;
+  }
+
+  nav .nav-item:nth-child(5) {
+    margin-left: 0;
+  }
+
+  nav .menu-icon__bar1,
+  nav .menu-icon__bar2,
+  nav .menu-icon__bar3 {
+    width: 20px;
+  }
+
+  nav .menu-icon__bar2 {
+    width: 25px;
+  }
+
+  nav .menu-icon__bar1,
+  nav .menu-icon__bar2,
+  nav .menu-icon__bar3 {
+    height: 2px;
+  }
+
+  nav .change .menu-icon__bar1 {
+    width: 25px;
+    transform: translate(0, 8px) rotate(-45deg);
+    -webkit-transform: translate(0px, 8px) rotate(-45deg);
+  }
+
+  nav .change .menu-icon__bar3 {
+    width: 25px;
+  }
+
+  nav .navbar__menu-icon {
+    padding-top: 12px;
+  }
+
+  /* ------- Hero Section CSS -------- */
+
+  #hero .hero-content h1 {
+    font-size: 4.8rem;
+    line-height: 60px;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #hero .hero-content span {
+    font-size: 5rem;
+  }
+
+  #hero .hero-content p {
+    width: 100%;
+  }
+
+  #hero .hero-img .hero__ask-anything__small-icon {
+    top: 40px;
+    left: 30px;
+  }
+
+  /* -------- Trusted Brand Section CSS -------- */
+
+  #trusted-brand {
+    padding: 50px 0;
+  }
+
+  #trusted-brand .heading {
+    border: none;
+    background: none;
+  }
+
+  #trusted-brand .brands .single-brand {
+    width: 50%;
+  }
+
+  #trusted-brand .brands .single-brand:last-child {
+    display: none;
+  }
+
+  /* -------- Testimonial Section CSS -------- */
+  #testimonial .testimonial-content__text {
+    font-size: 2.5rem;
+    line-height: 40px;
+  }
+
+  /* -------- Pricing Section CSS -------- */
+  #pricing .price-plan__details,
+  #pricing .price-plan__price-info {
+    padding: 35px 40px;
+  }
+
+  #pricing .price-plan__details .short {
+    display: none;
+  }
+
+  /* -------- How-To-Use Section CSS -------- */
+  #how-to-use .how-to-use__ask-anything {
+    display: none;
+  }
+
+  /* -------- Boost-up Section CSS -------- */
+
+  #boost-up .boost-up__header-text {
+    padding-top: 30px;
+  }
+
+  #boost-up .inner-contents {
+    flex-direction: column;
+  }
+
+  /* -------- Embrace future Section  CSS -------- */
+
+  #embrace-future .embrace-future-inner-content {
+    padding: 100px 0px;
+  }
+
+  #embrace-future .embrace-future-inner-content h2 {
+    max-width: 350px;
+  }
+
+  #embrace-future .embrace-future-inner-content span {
+    font-size: 3rem;
+  }
+
+  /* -------- Productivity Section  CSS -------- */
+  #productivity {
+    margin-top: 75px;
+  }
+
+  #productivity .productivity-inner h2 {
+    font-size: 2.4rem !important;
+    line-height: 40px;
+  }
+
+  #productivity .productivity-inner ul {
+    margin: 30px 0px;
+  }
+
+  #productivity .productivity-inner ul li {
+    font-size: 1.8rem;
+  }
+
+  #productivity .productivity-inner ul li:nth-child(2) {
+    display: none;
+  }
+
+  /* -------- Footer Section CSS -------- */
+  footer .footer-bottom hr {
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    opacity: 0.3;
+  }
+}
